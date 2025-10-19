@@ -1,0 +1,7 @@
+Color Palette: -
+Dark: 
+    Background: #121212
+    primary: #171717
+    accent1: #2c2c2c
+    accent2: #262626
+    Text: #ffffff
