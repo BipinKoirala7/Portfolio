@@ -19,7 +19,7 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap",
   },
   {
     rel: "stylesheet",
@@ -36,7 +36,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="w-[100dvw] h-[100dvh] bg-background text-text flex justify-center font-primary">
+      <body className="w-[100dvw] h-[100dvh] box-border bg-background text-text flex justify-center font-primary py-8">
         {children}
         <ScrollRestoration />
         <Scripts />

@@ -1,15 +1,21 @@
+import AboutSection from "./AboutSection";
+import EducationSection from "./EducationSection";
+import GetInTouchSection from "./GetInTouchSection";
+import GreetingsSection from "./GreetingsSection";
+import ProjectsSection from "./ProjectsSection";
+import ResumeSection from "./ResumeSection";
+import SkillsSection from "./SkillsSection";
+
 function HomeComponent() {
   return (
-    <div className="flex gap-2 justify-between items-center">
-      <div className="flex flex-col">
-        <p className="text-[3rem] font-bold">Hi, I'm Bipin Koirala 👏</p>
-        <p>React.js/Node.js/Spring Boot | Full Stack Developer</p>
-      </div>
-      <img
-        src="/my_avatar.jpg"
-        alt=""
-        className="w-30 rounded-[100%] aspect-square"
-      />
+    <div className="flex flex-col gap-12">
+      <GreetingsSection />
+      <AboutSection />
+      <EducationSection />
+      <SkillsSection />
+      <ResumeSection />
+      <ProjectsSection />
+      <GetInTouchSection />
     </div>
   );
 }

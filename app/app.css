@@ -1,14 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #000000;
-  /* --color-background: #121212; */
+
+  --text-h1: 3rem;
+  --text-h2: 2rem;
+  --text-h3: 1.25rem;
+  --text-paragraph: 0.9rem;
+  --text-small: 0.75rem;
+
+  /* --color-background: #000000; */
+  --color-background: #121212;
   --color-primary: #171717;
-  --color-accent1: #2c2c2c;
-  --color-text-accent: #a3a3a3;
+  --color-accent-1: #2c2c2c;
+  --color-accent-2: #FDB913;
+  --color-description: #a3a3a3;
   --color-text: #ffffff;
 
-  --font-primary:"Alan Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+  --font-primary:"Open Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-accent: "Playfair Display", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
