@@ -1,11 +1,27 @@
 import { TbSmartHome } from "react-icons/tb";
 import { HiFolderOpen } from "react-icons/hi2";
 import { BiSolidUserDetail } from "react-icons/bi";
+import { easeInOut, motion, type ValueTransition } from "motion/react";
+
 import Link from "~/UI/Link";
 
 function FloatingNavigation() {
+  const transition: ValueTransition = {
+    duration: 0.2,
+    ease: easeInOut
+  }
+
   return (
-    <div className="w-fit fixed bottom-5 flex gap-2 rounded-4xl border-[1px] border-[#262626] p-1 bg-[#0D0E0F]">
+    <motion.div
+      whileHover={{
+        scale: 1.1,
+      }}
+      whileTap={{
+        scale: 0.9,
+      }}
+      transition={transition}
+      className="w-fit fixed bottom-5 flex gap-1 rounded-4xl border-[1px] border-[#262626] p-1 bg-[#0D0E0F]"
+    >
       <Link
         to="/"
         icon={<TbSmartHome className="text-[1.25rem]" />}
@@ -21,7 +37,7 @@ function FloatingNavigation() {
         icon={<BiSolidUserDetail className="text-[1.25rem]" />}
         placeholder="About"
       />
-    </div>
+    </motion.div>
   );
 }
 
