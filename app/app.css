@@ -11,12 +11,13 @@
   /* --color-background: #000000; */
   --color-background: #121212;
   --color-primary: #171717;
+  --color-secondary: #262626;
   --color-accent-1: #2c2c2c;
   --color-accent-2: #FDB913;
   --color-description: #a3a3a3;
   --color-text: #ffffff;
 
-  --font-primary:"Open Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+  --font-primary:"DM Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-accent: "Playfair Display", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

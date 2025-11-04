@@ -20,7 +20,7 @@ function FloatingNavigation() {
         scale: 0.9,
       }}
       transition={transition}
-      className="w-fit fixed bottom-5 flex gap-1 rounded-4xl border-[1px] border-[#262626] p-1 bg-[#0D0E0F]"
+      className="w-fit fixed bottom-5 flex gap-1 rounded-4xl border-[1px] border-accent-1 p-1 bg-primary"
     >
       <Link
         to="/"
