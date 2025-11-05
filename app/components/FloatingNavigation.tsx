@@ -1,9 +1,9 @@
 import { TbSmartHome } from "react-icons/tb";
 import { HiFolderOpen } from "react-icons/hi2";
 import { BiSolidUserDetail } from "react-icons/bi";
-import { easeInOut, motion, type ValueTransition } from "motion/react";
-
 import Link from "~/UI/Link";
+
+import { easeInOut, motion, type ValueTransition } from "motion/react";
 
 function FloatingNavigation() {
   const transition: ValueTransition = {
@@ -20,7 +20,7 @@ function FloatingNavigation() {
         scale: 0.9,
       }}
       transition={transition}
-      className="w-fit fixed bottom-5 flex gap-1 rounded-4xl border-[1px] border-accent-1 p-1 bg-primary"
+      className="z-10 w-fit fixed bottom-5 flex gap-1 rounded-4xl border-[1px] border-accent-1 p-1 bg-primary"
     >
       <Link
         to="/"

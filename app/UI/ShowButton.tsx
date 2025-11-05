@@ -7,7 +7,7 @@ type ButtonProps = {
 
 function ShowButton(props: ButtonProps) {
   const { className, children } = props;
-  return <button className={className}>{children}</button>;
+  return <div className={className}>{children}</div>;
 }
 
 export default ShowButton;

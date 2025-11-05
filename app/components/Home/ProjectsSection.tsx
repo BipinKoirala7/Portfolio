@@ -24,6 +24,7 @@ function ProjectsSection() {
         "Docker",
       ],
       website: "https://mymoney.com",
+      status: "Ongoing"
     },
     {
       title: "Portfolio",
@@ -32,6 +33,7 @@ function ProjectsSection() {
         "It is my simple portfolio. You are seeing this in my portfolio. My Portfolio is my online presence for anybody to connect, know and contact me.",
       technologies: ["React.js", "React Router v7", "Tailwind CSS"],
       website: "https://mymoney.com",
+      status: "Ongoing"
     },
   ];
   return (
