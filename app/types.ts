@@ -1,15 +1,43 @@
-type SkillsT = {
-    title: string;
-    skills: Array<string>;
+export interface About {
+  p1: string;
+  p2: string;
+  p3: string;
+  p4: string;
 }
 
-type ProjectT = {
-    title: string;
-    timeline: string;
-    description: string;
-    technologies: Array<string>;
-    website: string;
-    status: string;
+export interface Education {
+  name: string;
+  course: string;
+  start_date: string;
+  end_date: string;
 }
 
-export type { SkillsT, ProjectT };
+export interface SkillGroup {
+  title: string;
+  skills: string[];
+}
+
+export interface User {
+  name: string;
+  email: string;
+  linkedIn_account: string;
+  education: Education[];
+  about: About;
+  skills: SkillGroup[];
+}
+
+export interface Project {
+  id: string;
+  title: string;
+  timeline: string;
+  description: string;
+  technologies: string[];
+  codebase: string;
+}
+
+export interface ZustandPortfolioData {
+  user: User | null;
+  projects: Project[] | null;
+  setUser: (user: User) => void;
+  setProjects: (projects: Project[]) => void;
+}

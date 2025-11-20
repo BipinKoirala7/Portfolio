@@ -1,4 +1,3 @@
-
 function AboutSection() {
   return (
     <div className="flex flex-col gap-4">
@@ -39,4 +38,4 @@ function AboutSection() {
   );
 }
 
-export default AboutSection
+export default AboutSection;

@@ -1,8 +1,8 @@
 import ShowButton from "~/UI/ShowButton";
-import type { SkillsT } from "~/types";
+import type { SkillGroup } from "~/types";
 
 function SkillsSection() {
-  const skillsData: SkillsT[] = [
+  const skillsData: SkillGroup[] = [
     {
       title: "Languages",
       skills: ["JavaScript", "TypeScript", "Node.js", "Java"],
@@ -39,11 +39,11 @@ function SkillsSection() {
       <div className="flex flex-col gap-3">
         {skillsData.map((skill) => {
           return (
-            <div className="flex flex-col gap-2">
+            <div id={skill.title} className="flex flex-col gap-2">
               <p className="text-h3 font-accent">{skill.title}:</p>
               <div className="flex gap-1 flex-wrap">
                 {skill.skills.map((s) => (
-                  <ShowButton className="w-fit text-paragraph px-3 rounded-xl font-bold bg-text text-accent-1">
+                  <ShowButton key={s} className="w-fit text-paragraph px-3 rounded-xl font-bold bg-text text-accent-1">
                     {s}
                   </ShowButton>
                 ))}

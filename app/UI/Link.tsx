@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { useState, type ReactElement } from "react";
-import { useNavigate } from "react-router";
+import { redirect, useNavigate } from "react-router";
 
 type LinkProps = {
   icon: ReactElement;
@@ -11,6 +11,10 @@ type LinkProps = {
 function Link(props: LinkProps) {
   const { icon, placeholder, to } = props;
   const [hide, setHide] = useState(false);
+
+  if (!to.startsWith("/")) {
+    redirect(to);
+  }
 
   const navigate = useNavigate();
 

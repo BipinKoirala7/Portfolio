@@ -15,13 +15,13 @@ function FloatingNavigation() {
   return (
     <motion.div
       whileHover={{
-        scale: 1.1,
+        scale: 1.05,
       }}
       whileTap={{
-        scale: 0.9,
+        scale: 0.95,
       }}
       transition={transition}
-      className="z-10 w-fit fixed bottom-5 flex items-center gap-2 rounded-4xl border-[1px] border-accent-1 p-1 bg-primary"
+      className="z-10 w-fit fixed bottom-5 flex items-center gap-1 rounded-4xl border-[1px] border-accent-1 p-1 bg-primary"
     >
       <Link
         to="/"
@@ -34,10 +34,16 @@ function FloatingNavigation() {
         placeholder="Projects"
       />
       <p className="w-[1px] h-8 bg-accent-1" />
-      <a href="mailto:bipinkoirala2061@gmail.com">
+      <a
+        href="mailto:bipinkoirala2061@gmail.com"
+        className="flex gap-2 items-center px-3 py-2 text-[0.75rem] rounded-4xl hover:bg-[#262626] text-text-accent hover:text-text cursor-pointer transition-all duration-300"
+      >
         <IoMdMail className="text-[1.25rem]" />
       </a>
-      <a href="https://www.linkedin.com/in/bipin-koirala-6b616636a/">
+      <a
+        href="https://www.linkedin.com/in/bipin-koirala-6b616636a/"
+        className="flex gap-2 items-center px-3 py-2 text-[0.75rem] rounded-4xl hover:bg-[#262626] text-text-accent hover:text-text cursor-pointer transition-all duration-300"
+      >
         {" "}
         <FaLinkedin className="text-[1.25rem]" />
       </a>

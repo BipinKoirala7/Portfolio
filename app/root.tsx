@@ -10,6 +10,14 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
+import data from "~/data.json";
+import usePortfolioDataStore from "./data/zustand";
+import { useEffect } from "react";
+
+export async function loader() {
+  return data;
+}
+
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -45,7 +53,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function App() {
+export default function App({ }) {
+  const { setUser, setProjects } = usePortfolioDataStore();
+  
+  useEffect(() => {
+    setUser(data.user);
+    setProjects(data.projects);
+  },[])
+
   return <Outlet />;
 }
 

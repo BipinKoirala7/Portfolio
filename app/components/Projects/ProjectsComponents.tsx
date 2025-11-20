@@ -1,35 +1,22 @@
-import { useLoaderData } from "react-router";
+import type { ProjectT } from "~/types";
+import ProjectBox from "~/UI/ProjectBox";
 
-export async function loader() {
-  try {
-    const response = await fetch("./data.json");
-    if (!response.ok) {
-      throw new Error(response.statusText);
-    }
-    const data = await response.json();
-    return data;
-  } catch (e) {
-    if (e instanceof Error) {
-      console.log(e.message);
-    } else {
-      console.log("An error occurred: " + e);
-    }
-  }
-}
+type ProjectInfoT = {
+  projects: ProjectT[];
+};
 
-function ProjectsComponents() {
-  const data = useLoaderData();
-  console.log(data);
+export default function ProjectsComponents(props: ProjectInfoT) {
+  const { projects } = props;
   return (
     <div className="flex flex-col gap-4 items-center">
       <p className="relative w-fit text-h2 font-accent font-bold border-b-4 border-accent-2 px-1">
         My Side Projects
-          </p>
-          <div>
-              
-          </div>
+      </p>
+      <div className="flex flex-col gap-4">
+        {projects.map((project) => (
+          <ProjectBox project={project} />
+        ))}
+      </div>
     </div>
   );
 }
-
-export default ProjectsComponents;

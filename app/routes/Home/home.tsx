@@ -3,8 +3,8 @@ import  HomeComponent from "~/components/Home/HomeComponent";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Home | Bipin Koirala" },
+    { name: "description", content: "Welcome to the homepage of portfolio of Bipin Koirala" },
   ];
 }
 

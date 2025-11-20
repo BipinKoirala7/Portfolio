@@ -1,37 +1,97 @@
 {
-    "data": {
-        "projects": [
-            {
-                "title": "Budget Planner",
-                "timeline": "Nov 2025",
-                "description": "MyMoney is a simple offline expense tracker with budgeting, multiple accounts, and charts. It has a homescreen widget for quick expense logging. The Pro version adds themes, more icons, and passcode protection.",
-                "technologies": [
-                    "React.js",
-                    "React Router v7",
-                    "Tailwind CSS",
-                    "Java",
-                    "Spring Boot",
-                    "Microservices",
-                    "OAuth",
-                    "JWT",
-                    "REST API",
-                    "Docker"
-                ],
-                "website": "https://mymoney.com",
-                "status": "Ongoing"
-            },
-            {
-                "title": "Portfolio",
-                "timeline": "Nov 2025",
-                "description": "It is my simple portfolio. You are seeing this in my portfolio. My Portfolio is my online presence for anybody to connect, know and contact me.",
-                "technologies": [
-                    "React.js",
-                    "React Router v7",
-                    "Tailwind CSS"
-                ],
-                "website": "https://mymoney.com",
-                "status": "Ongoing"
-            }
+  "user": {
+    "name": "Bipin Koirala",
+    "email": "bipinkoirala2061@gmail.com",
+    "linkedIn_account":"https://www.linkedin.com/in/bipin-koirala-6b616636a/",
+    "education": [
+      {
+        "name":"Informatics College Pokhara",
+        "course": "Bachelor in Information Technology",
+        "start_date":"2025",
+        "end_date":"2027"
+      }
+    ],
+    "about": {
+      "p1": "",
+      "p2": "",
+      "p3": "",
+      "p4": ""
+    },
+    "skills": [
+      {
+        "title": "Languages",
+        "skills": [
+          "JavaScript",
+          "TypeScript",
+          "Node.js",
+          "Java"
         ]
+      },
+      {
+        "title": "Frameworks",
+        "skills": [
+          "React.js",
+          "React Router v7",
+          "Next.js",
+          "Express.js",
+          "Tailwind CSS",
+          "Spring Boot"
+        ]
+      },
+      {
+        "title": "DevOps",
+        "skills": [
+          "Docker",
+          "Microservices",
+          "Git",
+          "GitHub"
+        ]
+      },
+      {
+        "title": "Databases",
+        "skills": [
+          "PostgreSQL",
+          "MySQL",
+          "Mongo DB"
+        ]
+      },
+      {
+        "title": "Currently Exploring",
+        "skills": [
+          "API Security",
+          "System Design"
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "f04f218a-55f4-4783-90ad-151f62524b76",
+      "title": "Budget Planner API",
+      "timeline": "Nov 2025",
+      "description": "MyMoney is a simple offline expense tracker with budgeting, multiple accounts, and charts. It has a homescreen widget for quick expense logging. The Pro version adds themes, more icons, and passcode protection.",
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Microservices",
+        "OAuth",
+        "JWT",
+        "REST API",
+        "Docker"
+      ],
+      "codebase": "https://github.com/BipinKoirala7/Budget-Planner"
+    },
+    {
+      "id": "94e2fdb1-360a-49ab-8522-b0c81f8f9ae1",
+      "title": "Portfolio",
+      "timeline": "Nov 2025",
+      "description": "It is my simple portfolio. You are seeing this in my portfolio. My Portfolio is my online presence for anybody to connect, know and contact me.",
+      "technologies": [
+        "React.js",
+        "React Router v7",
+        "Tailwind CSS"
+      ],
+      "codebase": "https://github.com/BipinKoirala7/Portfolio"
     }
+  ]
 }
