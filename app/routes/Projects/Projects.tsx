@@ -1,8 +1,7 @@
+import ProjectsComponents from "~/components/Projects/ProjectsComponents";
 
 function Projects() {
-  return (
-    <div>Projects</div>
-  )
+  return <ProjectsComponents />;
 }
 
-export default Projects
+export default Projects;

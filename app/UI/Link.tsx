@@ -19,7 +19,7 @@ function Link(props: LinkProps) {
       onMouseEnter={() => setHide((prev) => !prev)}
       onMouseLeave={() => setHide((prev) => !prev)}
       onClick={() => navigate(to)}
-      className={`flex gap-2 items-center px-3 py-2 text-[0.75rem] rounded-4xl hover:bg-[#262626] text-text-accent hover:text-text transition-all duration-300`}
+      className={`flex gap-2 items-center px-3 py-2 text-[0.75rem] rounded-4xl hover:bg-[#262626] text-text-accent hover:text-text cursor-pointer transition-all duration-300`}
     >
       {icon}
       {hide && placeholder}

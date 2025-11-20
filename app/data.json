@@ -1,0 +1,37 @@
+{
+    "data": {
+        "projects": [
+            {
+                "title": "Budget Planner",
+                "timeline": "Nov 2025",
+                "description": "MyMoney is a simple offline expense tracker with budgeting, multiple accounts, and charts. It has a homescreen widget for quick expense logging. The Pro version adds themes, more icons, and passcode protection.",
+                "technologies": [
+                    "React.js",
+                    "React Router v7",
+                    "Tailwind CSS",
+                    "Java",
+                    "Spring Boot",
+                    "Microservices",
+                    "OAuth",
+                    "JWT",
+                    "REST API",
+                    "Docker"
+                ],
+                "website": "https://mymoney.com",
+                "status": "Ongoing"
+            },
+            {
+                "title": "Portfolio",
+                "timeline": "Nov 2025",
+                "description": "It is my simple portfolio. You are seeing this in my portfolio. My Portfolio is my online presence for anybody to connect, know and contact me.",
+                "technologies": [
+                    "React.js",
+                    "React Router v7",
+                    "Tailwind CSS"
+                ],
+                "website": "https://mymoney.com",
+                "status": "Ongoing"
+            }
+        ]
+    }
+}
