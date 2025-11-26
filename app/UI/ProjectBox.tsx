@@ -1,9 +1,9 @@
-import type { ProjectT } from "~/types";
+import type { Project } from "~/types";
 import ShowButton from "./ShowButton";
 import { FaGithub } from "react-icons/fa6";
 
 type ProjectBoxT = {
-  project: ProjectT;
+  project: Project;
 };
 
 function ProjectBox(props: ProjectBoxT) {

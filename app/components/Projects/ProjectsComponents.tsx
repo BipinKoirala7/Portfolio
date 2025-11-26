@@ -1,12 +1,8 @@
-import type { ProjectT } from "~/types";
+import usePortfolioDataStore from "~/data/zustand";
 import ProjectBox from "~/UI/ProjectBox";
 
-type ProjectInfoT = {
-  projects: ProjectT[];
-};
-
-export default function ProjectsComponents(props: ProjectInfoT) {
-  const { projects } = props;
+export default function ProjectsComponents() {
+  const projects = usePortfolioDataStore(state => state.projects);
   return (
     <div className="flex flex-col gap-4 items-center">
       <p className="relative w-fit text-h2 font-accent font-bold border-b-4 border-accent-2 px-1">

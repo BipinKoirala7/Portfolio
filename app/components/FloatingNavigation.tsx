@@ -5,8 +5,11 @@ import Link from "~/UI/Link";
 import { easeInOut, motion, type ValueTransition } from "motion/react";
 import { IoMdMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa6";
+import usePortfolioDataStore from "~/data/zustand";
 
 function FloatingNavigation() {
+  const { email, linkedIn_account } = usePortfolioDataStore(state => state.user);
+
   const transition: ValueTransition = {
     duration: 0.2,
     ease: easeInOut,
@@ -35,13 +38,13 @@ function FloatingNavigation() {
       />
       <p className="w-[1px] h-8 bg-accent-1" />
       <a
-        href="mailto:bipinkoirala2061@gmail.com"
+        href={`mailto:${email}`}
         className="flex gap-2 items-center px-3 py-2 text-[0.75rem] rounded-4xl hover:bg-[#262626] text-text-accent hover:text-text cursor-pointer transition-all duration-300"
       >
         <IoMdMail className="text-[1.25rem]" />
       </a>
       <a
-        href="https://www.linkedin.com/in/bipin-koirala-6b616636a/"
+        href={linkedIn_account}
         className="flex gap-2 items-center px-3 py-2 text-[0.75rem] rounded-4xl hover:bg-[#262626] text-text-accent hover:text-text cursor-pointer transition-all duration-300"
       >
         {" "}

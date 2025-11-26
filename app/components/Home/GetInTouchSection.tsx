@@ -1,7 +1,10 @@
 import { FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import usePortfolioDataStore from "~/data/zustand";
 
 function GetInTouchSection() {
+  const { email, linkedIn_account } = usePortfolioDataStore(state => state.user);
+
   return (
     <div className="min-h-80 flex flex-col gap-4 items-center justify-center">
       <div className="flex flex-col gap-2 items-center">
@@ -12,11 +15,11 @@ function GetInTouchSection() {
       </div>
       <div className="flex items-center justify-center gap-1 text-h2">
         <p>Just</p>
-        <a href="mailto:bipinkoirala2061@gmail.com">
+        <a href={`mailto:${email}`}>
           <IoMdMail className="text-accent-2" />
         </a>
         <p>me or dm me on</p>
-        <a href="https://www.linkedin.com/in/bipin-koirala-6b616636a/">
+        <a href={linkedIn_account}>
           {" "}
           <FaLinkedin className="text-accent-2" />
         </a>

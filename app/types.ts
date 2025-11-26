@@ -1,13 +1,9 @@
-export interface About {
-  p1: string;
-  p2: string;
-  p3: string;
-  p4: string;
-}
-
 export interface Education {
+  id: string;
+  college_image: string;
   name: string;
   course: string;
+  website: string;
   start_date: string;
   end_date: string;
 }
@@ -19,10 +15,11 @@ export interface SkillGroup {
 
 export interface User {
   name: string;
+  talent_description: string;
   email: string;
+  resume: string;
   linkedIn_account: string;
   education: Education[];
-  about: About;
   skills: SkillGroup[];
 }
 
@@ -36,8 +33,6 @@ export interface Project {
 }
 
 export interface ZustandPortfolioData {
-  user: User | null;
-  projects: Project[] | null;
-  setUser: (user: User) => void;
-  setProjects: (projects: Project[]) => void;
+  user: User;
+  projects: Project[];
 }

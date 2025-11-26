@@ -1,11 +1,11 @@
 import create from "zustand";
-import type { Project, User, ZustandPortfolioData } from "~/types";
+
+import data from "~/data.json";
+import type { ZustandPortfolioData } from "~/types";
 
 const usePortfolioDataStore = create<ZustandPortfolioData>((set) => ({
-  user: null,
-  projects: null,
-  setProjects: (projects: Project[]) => set({ projects }),
-  setUser: (user: User) => set({ user }),
+  user: data.user,
+  projects: data.projects,
 }));
 
 export default usePortfolioDataStore;

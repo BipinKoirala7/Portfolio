@@ -1,22 +1,21 @@
 {
   "user": {
     "name": "Bipin Koirala",
+    "talent_description": "React.js/Node.js/Spring Boot | Full Stack Developer",
     "email": "bipinkoirala2061@gmail.com",
     "linkedIn_account":"https://www.linkedin.com/in/bipin-koirala-6b616636a/",
+    "resume": "./resume.pdf",
     "education": [
       {
+        "id": "956bcda2-9210-474b-b9ce-ea5e99c6cb41",
+        "college_image": "./informatics-logo.webp",
         "name":"Informatics College Pokhara",
         "course": "Bachelor in Information Technology",
+        "website": "https://www.icp.edu.np",
         "start_date":"2025",
         "end_date":"2027"
       }
     ],
-    "about": {
-      "p1": "",
-      "p2": "",
-      "p3": "",
-      "p4": ""
-    },
     "skills": [
       {
         "title": "Languages",

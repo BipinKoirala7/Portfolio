@@ -1,3 +1,5 @@
+"use client"
+
 import {
   isRouteErrorResponse,
   Links,
@@ -10,15 +12,8 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
-import data from "~/data.json";
-import usePortfolioDataStore from "./data/zustand";
-import { useEffect } from "react";
-
-export async function loader() {
-  return data;
-}
-
 export const links: Route.LinksFunction = () => [
+  { rel: "icon", href: "./favicon.ico", type: "image/x-icon" },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -41,6 +36,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <Meta />
         <Links />
       </head>
@@ -53,14 +49,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function App({ }) {
-  const { setUser, setProjects } = usePortfolioDataStore();
-  
-  useEffect(() => {
-    setUser(data.user);
-    setProjects(data.projects);
-  },[])
-
+export default function App() {
   return <Outlet />;
 }
 

@@ -1,45 +1,17 @@
 import ShowButton from "~/UI/ShowButton";
-import type { SkillGroup } from "~/types";
+import usePortfolioDataStore from "~/data/zustand";
 
 function SkillsSection() {
-  const skillsData: SkillGroup[] = [
-    {
-      title: "Languages",
-      skills: ["JavaScript", "TypeScript", "Node.js", "Java"],
-    },
-    {
-      title: "Frameworks",
-      skills: [
-        "React.js",
-        "React Router v7",
-        "Next.js",
-        "Express.js",
-        "Tailwind CSS",
-        "Spring Boot",
-      ],
-    },
-    {
-      title: "DevOps",
-      skills: ["Docker", "Microservices", "Git", "GitHub"],
-    },
-    {
-      title: "Databases",
-      skills: ["PostgreSQL", "MySQL", "Mongo DB"],
-    },
-    {
-      title: "Currently Exploring",
-      skills: ["API Security", "System Design"],
-    },
-  ];
+  const skills = usePortfolioDataStore(state => state.user.skills);
   return (
     <div className="flex flex-col gap-4">
       <p className="relative w-fit text-h2 font-accent font-bold border-b-4 border-accent-2 px-1">
         Skills
       </p>
       <div className="flex flex-col gap-3">
-        {skillsData.map((skill) => {
+        {skills.map((skill) => {
           return (
-            <div id={skill.title} className="flex flex-col gap-2">
+            <div key={skill.title} className="flex flex-col gap-2">
               <p className="text-h3 font-accent">{skill.title}:</p>
               <div className="flex gap-1 flex-wrap">
                 {skill.skills.map((s) => (

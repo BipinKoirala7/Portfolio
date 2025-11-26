@@ -4,7 +4,7 @@ import usePortfolioDataStore from "~/data/zustand";
 import ProjectBox from "~/UI/ProjectBox";
 
 function ProjectsSection() {
-  const { projects } = usePortfolioDataStore();
+  const projects = usePortfolioDataStore(state => state.projects.slice(0,2));
 
   if (projects == null) {
     return <div>No Projects to Select from</div>
@@ -21,7 +21,7 @@ function ProjectsSection() {
       </p>
       <div className="grid grid-cols-2 gap-2">
         {projects.map((project) => (
-          <ProjectBox project={project} />
+          <ProjectBox key={project.id} project={project} />
         ))}
       </div>
       <NavLink

@@ -1,14 +1,15 @@
 import ProjectsComponents from "~/components/Projects/ProjectsComponents";
 import type { Route } from "./+types/Projects";
-import data from "~/data.json";
 
-export async function loader({ params }: Route.ClientLoaderArgs) {
-  return data.projects;
+export function meta({ }: Route.MetaArgs) {
+  return [
+    { title: "Projects | Bipin Koirala" },
+    { name: "description", content: "Welcome to the projects page of portfolio of Bipin Koirala" },
+  ]
 }
 
-function Projects({ loaderData }: Route.ComponentProps) {
-  console.log(loaderData);
-  return <ProjectsComponents projects={loaderData}/>;
+function Projects() {
+  return <ProjectsComponents />;
 }
 
 export default Projects;
